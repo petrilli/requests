@@ -518,7 +518,10 @@ If a request exceeds the configured number of maximum redirections, a
 :exc:`~requests.exceptions.TooManyRedirects` exception is raised.
 
 All exceptions that Requests explicitly raises inherit from
-:exc:`requests.exceptions.RequestException`.
+:exc:`requests.exceptions.RequestException`. This means that the 
+:class:`Request <requests.Request>` and :class:`Response <requests.Response>` 
+objects are available on the exception as ``request`` and ``response`` 
+respectively.
 
 -----------------------
 
